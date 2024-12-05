@@ -2,8 +2,9 @@
 interface Props{
     Nombre: string;
     Descripcion: string;
+    Link:string;
 }
-const { Nombre, Descripcion } = Astro.props;
+const { Nombre, Descripcion,Link } = Astro.props;
 ---
 
 <div
@@ -18,5 +19,5 @@ const { Nombre, Descripcion } = Astro.props;
     >{Descripcion}</span
   >
   <br>
-  <a type="button" href="/" class="text-white bg-[#a9afe3] hover:bg-[#cea9e3] focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg md:text-lg px-1 md:px-4 text-center">Leccion</a>
+  <a type="button" href=`/${Link}` class="text-white bg-[#a9afe3] hover:bg-[#cea9e3] focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg md:text-lg px-1 md:px-4 text-center">Leccion</a>
 </div>
