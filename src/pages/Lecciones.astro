@@ -1,7 +1,29 @@
 ---
+import Card from "../components/Card.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
+const Cursos = [
+  {
+    Nombre: "Celular Inteligente 1",
+    Descripcion: "Primeros pasos sobre el uso de celular inteligente",
+    Link: "SmartPhone1",
+  },
+  {
+    Nombre: "Celular Inteligente 2",
+    Descripcion: "Como poner una Contraseña",
+    Link: "SmartPhone2",
+  },
+  {
+    Nombre: "Computadora",
+    Descripcion: "Primeros pasos en el uso de una Computadora ",
+    Link: "Computadora",
+  },
+];
 ---
 
 <Layout>
-    <h1>Lecciones</h1>
+  <SectionContainer
+    class="pt-44 pb-10 md:px-44 grid md:grid-cols-3 justify-items-center"
+    >{Cursos.map((curso) => <Card {...curso} />)}
+  </SectionContainer>
 </Layout>
