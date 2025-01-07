@@ -48,19 +48,27 @@ const Cuestionario = () => {
 
       <br />
       <div class="grid grid-rows-1 md:grid-cols-3 pb-10 text-center items-center max-w-3xl mx-auto">
-        <img src="/wifi.png" alt="icono de wifi" class="rounded-xl" />
-        <img src="/Linterna.png" alt="icono de linterna" class="rounded-xl" />
+        <img
+          src="/wifi.png"
+          alt="icono de wifi"
+          class="p-10 md:p-7 rounded-full"
+        />
+        <img
+          src="/Linterna.png"
+          alt="icono de linterna"
+          class="p-10 md:p-7 rounded-full"
+        />
         <img
           src="/Rotacion.png"
           alt="icono de rotacion de pantalla"
-          class="rounded-xl"
+          class="p-10 md:p-7 rounded-full"
         />
-        <label class="text-center">1</label>
-        <label class="text-center">2</label>
-        <label class="text-center">3</label>
       </div>
       <br />
-      <form onSubmit={handleSubmit} class="items-center grid grid-rows-3 max-w-xl mx-auto">
+      <form
+        onSubmit={handleSubmit}
+        class="items-center grid grid-rows-3 max-w-xl mx-auto"
+      >
         <div>
           <label class="text-4xl text-center">
             ¿Cuál es el icono para “Rotación automática de pantalla”?
