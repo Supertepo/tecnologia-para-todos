@@ -1,0 +1,15 @@
+---
+interface Props {
+  src: string;
+}
+
+const { src } = Astro.props;
+---
+<section class="w-full py-40 md:px-20 max-w-6xl mx-auto">
+
+  <lite-youtube videoid={src}></lite-youtube>
+</section>
+  
+  <script>
+    import "@justinribeiro/lite-youtube"
+</script>
