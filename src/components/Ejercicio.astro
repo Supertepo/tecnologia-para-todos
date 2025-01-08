@@ -1,0 +1,20 @@
+---
+interface Props {
+  leccion?: string;
+}
+
+const { leccion } = Astro.props;
+---
+
+<section class="w-full md:px-20 max-w-6xl mx-auto">
+  <br />
+  <a
+    class="text-white bg-[#a9afe3] hover:bg-[#cea9e3] focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg md:text-3xl text-5xl px-1 md:px-4 text-center"
+    href={leccion}
+  >
+    Leccion
+  </a>
+  <br />
+  <br />
+  <slot />
+</section>

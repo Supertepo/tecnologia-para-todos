@@ -7,23 +7,26 @@ const Cursos = [
     Nombre: "Celular Inteligente 1",
     Descripcion: "Primeros pasos sobre el uso de celular inteligente",
     Link: "SmartPhone1",
+    Tipo:"Lección"
   },
   {
     Nombre: "Celular Inteligente 2",
     Descripcion: "Como poner una Contraseña",
     Link: "SmartPhone2",
+    Tipo:"Lección"
   },
   {
     Nombre: "Computadora",
     Descripcion: "Primeros pasos en el uso de una Computadora ",
     Link: "Computadora",
+    Tipo:"Lección"
   },
 ];
 ---
 
 <Layout>
   <SectionContainer
-    class="pt-44 pb-10 md:px-44 grid md:grid-cols-3 justify-items-center"
+    class="pt-44 pb-10 md:px-44 justify-items-center"
     >{Cursos.map((curso) => <Card {...curso} />)}
   </SectionContainer>
 </Layout>

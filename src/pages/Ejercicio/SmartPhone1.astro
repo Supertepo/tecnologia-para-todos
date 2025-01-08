@@ -1,11 +1,14 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import SectionContainer from "../../components/SectionContainer.astro";
-import SmartPhone1C from "../../components/Smarphone1C"
+import SmartPhone1C from "../../components/Smarphone1C";
+import Ejercicio from "../../components/Ejercicio.astro";
 ---
 
 <Layout>
-  <SectionContainer class="pt-40">
-    <SmartPhone1C client:visible/>
+  <SectionContainer class="pt-32">
+    <Ejercicio leccion="/Leccion/SmartPhone1">
+      <SmartPhone1C client:visible />
+    </Ejercicio>
   </SectionContainer>
 </Layout>

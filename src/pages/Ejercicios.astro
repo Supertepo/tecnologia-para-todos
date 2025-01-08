@@ -1,7 +1,19 @@
 ---
+import Card from "../components/Card.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
+const Cuestionarios = [
+  {
+    Nombre: "Celular Inteligente 1",
+    Descripcion: "Primeros pasos sobre el uso de celular inteligente",
+    Link: "Ejercicio/SmartPhone1",
+    Tipo: "Ejercicio",
+  },
+];
 ---
 
 <Layout>
-    <h1>Ejercicios</h1>
+  <SectionContainer class="pt-44 pb-10 md:px-44 justify-items-center"
+    >{Cuestionarios.map((cuestionario) => <Card {...cuestionario} />)}
+  </SectionContainer>
 </Layout>

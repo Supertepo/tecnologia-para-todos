@@ -3,24 +3,24 @@ interface Props{
     Nombre?: string;
     Descripcion?: string;
     Link?:string;
+    Tipo?:string;
 }
-const { Nombre, Descripcion,Link } = Astro.props;
+const { Nombre, Descripcion,Link, Tipo } = Astro.props;
 ---
 
 <div
   class="w-auto max-w-full p-2 md:mx-8 my-8 md:my-4 bg-white rounded-lg shadow dark:bg-[#a9bee3]"
 >
 <h3
-  class="md:text-5xl text-6xl font-bold tracking-tight text-justify text-black dark:text-yellow-200/90"
+  class="md:text-5xl text-6xl font-bold tracking-tight text-justify text-black dark:text-white"
 >
   {Nombre}
 </h3>
-<br>
 <br>
   <span class="font-normal md:text-3xl text-5xl text-balance  text-black dark:text-white"
     >{Descripcion}</span
   >
   <br>
   <br>
-  <a type="button" href=`/Leccion/${Link}` class=" text-white bg-[#a9afe3] hover:bg-[#cea9e3] focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg md:text-3xl text-5xl px-1 md:px-4 text-center bottom-0 left-0">Lección</a>
+  <a type="button" href=`/${Link}` class=" text-white bg-[#a9afe3] hover:bg-[#cea9e3] focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg md:text-3xl text-5xl px-1 md:px-4 text-center bottom-0 left-0">{Tipo}</a>
 </div>
