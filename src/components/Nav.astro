@@ -48,14 +48,13 @@ import Menu from "./iconos/Menu.astro";
 </nav>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", () => {
     const menuButton = document.getElementById("menu-button");
     const menu = document.getElementById("menu");
 
-    if (menuButton && menu) {
-      menuButton.addEventListener("click", function () {
-        menu.classList.toggle("hidden");
-      });
-    }
+    menuButton?.addEventListener("click", () => {
+      menu?.classList.toggle("hidden");
+    });
   });
 </script>
+
