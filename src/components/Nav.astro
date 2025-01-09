@@ -1,60 +1,12 @@
----
-import Menu from "./iconos/Menu.astro";
----
-
 <nav class="fixed w-full z-10">
-  <div
-    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-4 py-4"
-  >
-    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img
-        src="/Tecnologia-para-todos.svg"
-        alt="Logo de Tecnologia para todos"
-        class="w-20 h-20"
-      />
-    </a>
-    <div class="md:hidden">
-      <button
-        id="menu-button"
-        class="text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700"
-      >
-        <Menu class="size-24"/>
-      </button>
-    </div>
-    <div
-      id="menu"
-      class="hidden w-full md:flex md:w-auto md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
-    >
-      <a
-        href="/"
-        class="text-white bg-[#a9afe3] hover:bg-[#cea9e3] focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg md:text-3xl text-4xl px-1 md:px-4 py-2 text-center block"
-      >
-        Inicio
-      </a>
-      <a
-        href="/Lecciones"
-        class="text-white bg-[#a9afe3] hover:bg-[#cea9e3] focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg md:text-3xl text-4xl px-1 md:px-4 py-2 text-center block"
-      >
-        Lecciones
-      </a>
-      <a
-        href="/Ejercicios"
-        class="text-white bg-[#a9afe3] hover:bg-[#cea9e3] focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg md:text-3xl text-4xl px-1 md:px-4 py-2 text-center block"
-      >
-        Ejercicios
-      </a>
-    </div>
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-4 py-4">
+  <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="/Tecnologia-para-todos.svg" alt="Logo de Tecnologia para todos" class="size-20">
+  </a>
+  <div class="flex md:flex-row md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <a type="button" href="/" class="text-white bg-[#a9afe3] hover:bg-[#cea9e3] focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg md:text-3xl text-4xl px-1 md:px-4 py-2 text-center">Inicio<a/>
+      <a type="button" href="/Lecciones" class="text-white bg-[#a9afe3] hover:bg-[#cea9e3] focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg md:text-3xl text-4xl px-1 md:px-4 py-2 text-center">Lecciones<a/>
+      <a type="button" href="/Ejercicios" class="text-white bg-[#a9afe3] hover:bg-[#cea9e3] focus:ring-4 focus:outline-none focus:ring-blue-300 md:font-medium rounded-lg md:text-3xl px-1 text-4xl md:px-4 py-2 text-center">Ejercicios<a/>
+  </div>
   </div>
 </nav>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.getElementById("menu-button");
-    const menu = document.getElementById("menu");
-
-    menuButton?.addEventListener("click", () => {
-      menu?.classList.toggle("hidden");
-    });
-  });
-</script>
-
