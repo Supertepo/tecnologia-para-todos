@@ -4,63 +4,66 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="container mx-auto">
+  <div class="container mx-auto py-40">
     <div class="flex flex-col items-center">
-      <h1 class="text-center text-6xl font-bold pt-40">
+      <h1 class="text-center text-4xl md:text-6xl font-bold">
         ¡AQUÍ ENCONTRARÁS TODOS NUESTROS EJERCICIOS!
       </h1>
     </div>
     <div class="flex justify-center">
-      <img
-        src="img/TECPT.png"
-        class="size-auto max-w-md"
-        alt="hola"
-      />
+      <img src="img/TECPT.png" class="size-40 md:size-auto max-w-md" alt="hola" />
     </div>
     <div class="flex flex-col items-center mt-8">
       <h1 class="text-center text-5xl font-bold">
         EJERCICIOS DEL CURSO: "CELULAR INTELIGENTE"
       </h1>
     </div>
-    <div class="grid grid-cols-3 items-center mt-8">
+    <div class="grid md:grid-cols-3 items-center mt-8">
       <div>
-        <h3 class="text-2xl font-semibold">Funciones básicas de un celular:</h3>
+        <h3 class="text-3xl font-semibold">Funciones básicas de un celular:</h3>
         <h4>
-          <a href="cuestionario.html" class="text-blue-500 hover:underline text-2xl">Ejercicio 1</a>
+          <a
+            href="/Ejercicio/SmartPhone1"
+            class="text-blue-500 hover:underline text-3xl">Ejercicio 1</a
+          >
         </h4>
       </div>
       <div>
-        <h3 class="text-2xl font-semibold">Cómo poner clave a mi celular</h3>
-        <h4 class="text-gray-500 text-2xl">Pendiente</h4>
+        <h3 class="text-3xl font-semibold">Cómo poner clave a mi celular</h3>
+        <h4 class="text-gray-500 text-3xl">Pendiente</h4>
       </div>
       <div>
-        <h3 class="text-xl font-semibold">Trabajando en este curso</h3>
-        <h4 class="text-gray-500">Pendiente</h4>
+        <h3 class="text-3xl font-semibold">Trabajando en este curso</h3>
+        <h4 class="text-gray-500 text-3xl">Pendiente</h4>
       </div>
     </div>
-  </div>
 
-  <div class="flex flex-col items-center mt-8">
-    <h1 class="text-center text-3xl font-bold">
-      EJERCICIOS DEL CURSO: "COMPUTADORA DE ESCRITORIO"
-    </h1>
-  </div>
-  <div class="grid grid-cols-3 items-center mt-8">
-    <div>
-      <h3 class="text-xl font-semibold">Partes de una Computadora:</h3>
-      <h4>
-        <a href="Partes de una computadora/Partes de la computadora.html" class="text-blue-500 hover:underline">Ejercicio 1</a>
-      </h4>
+    <div class="flex flex-col items-center mt-8">
+      <h1 class="text-center text-5xl font-bold">
+        EJERCICIOS DEL CURSO: "COMPUTADORA DE ESCRITORIO"
+      </h1>
     </div>
-    <div>
-      <h3 class="text-xl font-semibold">Encendido y Apagado de la Computadora:</h3>
-      <h4>
-        <a href="Encendido.Compu/Encendido.html" class="text-blue-500 hover:underline">Ejercicio 2</a>
-      </h4>
-    </div>
-    <div>
-      <h3 class="text-xl font-semibold">Trabajando en este curso</h3>
-      <h4 class="text-gray-500">Pendiente</h4>
+    <div class="grid md:grid-cols-3 items-center mt-8">
+      <div>
+        <h3 class="text-3xl font-semibold">Partes de una Computadora:</h3>
+        <h4>
+          <a
+            href="/Ejercicio/Computadora"
+            class="text-blue-500 text-3xl hover:underline">Ejercicio 1</a
+          >
+        </h4>
+      </div>
+      <div>
+        <h3 class="text-3xl font-semibold">
+          Encendido y Apagado de la Computadora:
+        </h3>
+        <h4>
+          <h4 class="text-gray-500 text-3xl">Pendiente</h4>
+      </div>
+      <div>
+        <h3 class="text-3xl font-semibold">Trabajando en este curso</h3>
+        <h4 class="text-gray-500 text-3xl">Pendiente</h4>
+      </div>
     </div>
   </div>
 </Layout>
