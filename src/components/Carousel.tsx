@@ -4,17 +4,17 @@ const Carousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      href: "Leccion/SmartPhone1",
+      href: "/Leccion/SmartPhone1",
       src: "img/Celu Inte.jpg.png",
       alt: "Los Angeles",
     },
     {
-      href: "servicio.html",
+      href: "/Leccion/Computadora",
       src: "img/ComPC.png",
       alt: "Chicago",
     },
     {
-      href: "/Leccion/SmartPhone1",
+      href: "/Ejercicios",
       src: "img/EjerdCurs.png",
       alt: "New York",
     },
