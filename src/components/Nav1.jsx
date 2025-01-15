@@ -12,9 +12,9 @@ const Navbar = () => {
       <div className="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
         <a href="/" className="flex items-center space-x-3">
           <img
-            src="img/TECPT.png"
+            src="/img/TECPT.png"
             alt="Logo de Tecnologia para todos"
-            className="h-40"
+            className="size-20"
           />
         </a>
         <div className="md:hidden">
