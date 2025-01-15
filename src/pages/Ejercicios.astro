@@ -1,30 +1,66 @@
 ---
-import Card from "../components/Card.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
-const Cuestionarios = [
-  {
-    Nombre: "Celular Inteligente 1",
-    Descripcion: "Primeros pasos sobre el uso de celular inteligente",
-    Link: "Ejercicio/SmartPhone1",
-    Tipo: "Ejercicio",
-  },
-  {
-    Nombre: "Computadora",
-    Descripcion: "Primeros pasos en el uso de una Computadora ",
-    Link: "Ejercicio/Computadora",
-    Tipo: "Ejercicio",
-  },
-];
 ---
 
 <Layout>
-  <h1
-    class="dark:text-gray text-center text-9xl md:text-8xl font-bold pb-6 pt-44 md:px-28 lg:pb-10"
-  >
-    Ejercicios
-  </h1>
-  <SectionContainer class="pb-10 md:px-44 justify-items-center"
-    >{Cuestionarios.map((cuestionario) => <Card {...cuestionario} />)}
-  </SectionContainer>
+  <div class="container mx-auto">
+    <div class="flex flex-col items-center">
+      <h1 class="text-center text-6xl font-bold pt-40">
+        ¡AQUÍ ENCONTRARÁS TODOS NUESTROS EJERCICIOS!
+      </h1>
+    </div>
+    <div class="flex justify-center">
+      <img
+        src="img/TECPT.png"
+        class="size-auto max-w-md"
+        alt="hola"
+      />
+    </div>
+    <div class="flex flex-col items-center mt-8">
+      <h1 class="text-center text-5xl font-bold">
+        EJERCICIOS DEL CURSO: "CELULAR INTELIGENTE"
+      </h1>
+    </div>
+    <div class="grid grid-cols-3 items-center mt-8">
+      <div>
+        <h3 class="text-2xl font-semibold">Funciones básicas de un celular:</h3>
+        <h4>
+          <a href="cuestionario.html" class="text-blue-500 hover:underline text-2xl">Ejercicio 1</a>
+        </h4>
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold">Cómo poner clave a mi celular</h3>
+        <h4 class="text-gray-500 text-2xl">Pendiente</h4>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold">Trabajando en este curso</h3>
+        <h4 class="text-gray-500">Pendiente</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center mt-8">
+    <h1 class="text-center text-3xl font-bold">
+      EJERCICIOS DEL CURSO: "COMPUTADORA DE ESCRITORIO"
+    </h1>
+  </div>
+  <div class="grid grid-cols-3 items-center mt-8">
+    <div>
+      <h3 class="text-xl font-semibold">Partes de una Computadora:</h3>
+      <h4>
+        <a href="Partes de una computadora/Partes de la computadora.html" class="text-blue-500 hover:underline">Ejercicio 1</a>
+      </h4>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold">Encendido y Apagado de la Computadora:</h3>
+      <h4>
+        <a href="Encendido.Compu/Encendido.html" class="text-blue-500 hover:underline">Ejercicio 2</a>
+      </h4>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold">Trabajando en este curso</h3>
+      <h4 class="text-gray-500">Pendiente</h4>
+    </div>
+  </div>
 </Layout>
