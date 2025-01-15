@@ -54,7 +54,7 @@ const Cuestionario = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-teal-300">
+    <div className="flex flex-col justify-center items-center">
       {validated && (
         <div>
           {allCorrect && <Confetti />}
@@ -72,7 +72,7 @@ const Cuestionario = () => {
         </div>
       )}
       <h1 className="text-center text-3xl text-gray-800">Cuestionario</h1>
-      <form id="cuestionario" onSubmit={handleSubmit} className="bg-white p-5 rounded-lg shadow-lg max-w-md w-11/12">
+      <form id="cuestionario" onSubmit={handleSubmit} className=" p-5 rounded-lg shadow-xl ">
         <div>
           <h3 className="text-lg font-bold text-gray-700">1. ¿Cuál es el icono para “Rotación automática de pantalla”?</h3>
           <label className="flex items-center mb-2">
