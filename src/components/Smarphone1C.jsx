@@ -69,7 +69,7 @@ const Cuestionario = () => {
           </div>
         </div>
       )}
-      <h1 className="text-center text-6xl text-gray-800">Cuestionario</h1>
+      <h1 className="text-center text-6xl font-extrabold text-gray-800">Cuestionario</h1>
       <form
         id="cuestionario"
         onSubmit={handleSubmit}

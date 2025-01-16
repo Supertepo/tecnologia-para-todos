@@ -6,17 +6,17 @@ const Carousel: React.FC = () => {
     {
       href: "/Leccion/SmartPhone1",
       src: "img/Celu Inte.jpg.png",
-      alt: "Los Angeles",
+      alt: "Leccion enfocada a celular inteligente",
     },
     {
       href: "/Leccion/Computadora",
       src: "img/ComPC.png",
-      alt: "Chicago",
+      alt: "Leccion enfocada a computadora",
     },
     {
       href: "/Ejercicios",
       src: "img/EjerdCurs.png",
-      alt: "New York",
+      alt: "Ejercicios de las lecciones",
     },
   ];
 
