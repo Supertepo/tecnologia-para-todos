@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Confetti from "react-confetti";
-
 const correctAnswers = {
   pregunta1: "3",
   pregunta2: "1",
@@ -9,7 +8,6 @@ const correctAnswers = {
   pregunta5: "b",
   pregunta6: "a",
 };
-
 const Cuestionario = () => {
   const [userAnswers, setUserAnswers] = useState({
     pregunta1: "",
@@ -19,19 +17,15 @@ const Cuestionario = () => {
     pregunta5: "",
     pregunta6: "",
   });
-
   const [results, setResults] = useState({});
   const [allCorrect, setAllCorrect] = useState(false);
   const [validated, setValidated] = useState(false);
-
+  const successAudioRef = useRef(null);
+  const failureAudioRef = useRef(null);
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setUserAnswers({
-      ...userAnswers,
-      [name]: value,
-    });
+    setUserAnswers({ ...userAnswers, [name]: value });
   };
-
   const checkAnswers = () => {
     const results = {};
     let allCorrect = true;
@@ -43,7 +37,6 @@ const Cuestionario = () => {
     }
     return { results, allCorrect };
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const { results, allCorrect } = checkAnswers();
@@ -51,6 +44,11 @@ const Cuestionario = () => {
     setAllCorrect(allCorrect);
     setValidated(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
+    if (allCorrect) {
+      successAudioRef.current.play();
+    } else {
+      failureAudioRef.current.play();
+    }
   };
 
   return (
@@ -311,6 +309,8 @@ const Cuestionario = () => {
           ))}
         </div>
       )}
+      <audio ref={successAudioRef} src="/success.mp3" preload="auto" />
+      <audio ref={failureAudioRef} src="/failure.mp3" preload="auto" />
     </div>
   );
 };

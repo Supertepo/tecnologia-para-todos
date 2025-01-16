@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Confetti from "react-confetti";
 
 const ComputerParts = () => {
@@ -22,6 +22,17 @@ const ComputerParts = () => {
     { id: "mouse", text: "Mouse" },
     { id: "bocinas", text: "Altavoces" },
   ]);
+
+  const successAudioRef = useRef(null);
+  const failureAudioRef = useRef(null);
+
+  useEffect(() => {
+    if (result === "¡Todas las respuestas son correctas!") {
+      successAudioRef.current.play();
+    } else if (result === "Algunas respuestas son incorrectas. ¡Intenta de nuevo!") {
+      failureAudioRef.current.play();
+    }
+  }, [result]);
 
   const handleDragStart = (e) => {
     e.dataTransfer.setData("text", e.target.id);
@@ -88,7 +99,7 @@ const ComputerParts = () => {
           <strong>Pregunta:</strong> Arrastra el nombre correcto a la zona
           correspondiente.
         </p>
-        <div className="grid grid-cols-2 md:flex justify-center gap-4 mb-6">
+        <div className="flex justify-center gap-4 mb-6">
           {draggableElements.map((element) => (
             <div
               key={element.id}
@@ -101,7 +112,7 @@ const ComputerParts = () => {
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-16 mb-10">
+        <div className="grid md:grid-cols-4 items-center gap-16 mb-10">
           <div
             className="dropzone border-2 border-dashed border-gray-500 w-64 h-64 flex items-center justify-center mb-6"
             id="drop-mouse"
@@ -138,17 +149,19 @@ const ComputerParts = () => {
         <div className="flex justify-center space-x-4">
           <button
             onClick={checkAnswers}
-            className="bg-red-500 text-3xl text-white py-3 px-6 rounded-lg mt-8 hover:bg-red-600"
+            className="bg-red-500 text-white py-3 px-6 rounded-lg mt-8 hover:bg-red-600"
           >
             Enviar Respuestas
           </button>
           <button
             onClick={resetQuiz}
-            className="bg-gray-500 text-3xl text-white py-3 px-6 rounded-lg mt-8 hover:bg-gray-600"
+            className="bg-gray-500 text-white py-3 px-6 rounded-lg mt-8 hover:bg-gray-600"
           >
             Reiniciar
           </button>
         </div>
+        <audio ref={successAudioRef} src="/success.mp3" preload="auto" />
+        <audio ref={failureAudioRef} src="/failure.mp3" preload="auto" />
       </div>
     </div>
   );
