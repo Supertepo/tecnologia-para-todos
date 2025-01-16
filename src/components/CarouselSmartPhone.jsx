@@ -4,14 +4,14 @@ import "tailwindcss/tailwind.css";
 const Carousel = () => {
   const slides = [
     {
-      href: "/Leccion/Computadora",
-      src: "/img/PartComup.jpeg",
-      alt: "Partes de la computadora",
+      href: "/Leccion/SmartPhone1",
+      src: "/img/FunBasic1.jpg.png",
+      alt: "Funciones basicas del celular inteligente",
     },
     {
-      href: "/Leccion/Computadora2",
-      src: "/img/EncYapg.jpeg",
-      alt: "Encendido y apagado de la computadora",
+      href: "/Leccion/SmartPhone2",
+      src: "/img/ContraCel3.png",
+      alt: "Como poner contraseña al celular inteligente",
     },
   ];
 
@@ -115,7 +115,7 @@ const Carousel = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 text-gray-800"
                 fill="none"
-                viewBox="0 24 24"
+                viewBox="0 0 24 24"
                 stroke="currentColor"
               >
                 <path

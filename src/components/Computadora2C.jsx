@@ -13,8 +13,8 @@ const ComputerStart = () => {
     "drop-step2": null,
   });
   const [draggableElements, setDraggableElements] = useState([
-    { id: "paso1", text: "1" },
-    { id: "paso2", text: "2" },
+    { id: "paso1", text: "1.Encender CPU" },
+    { id: "paso2", text: "2.Encender Monitor" },
   ]);
 
   const successAudioRef = useRef(null);
@@ -113,7 +113,7 @@ const ComputerStart = () => {
             onDragOver={handleDragOver}
             onDrop={handleDrop}
           >
-            <img src="/img/CPU.png" alt="Paso 1" className="w-32 h-32" />
+            <img src="/img/CPU.png" alt="Paso 1" className="size-48" />
           </div>
           <div
             className="dropzone border-2 border-dashed border-gray-500 w-64 h-64 flex items-center justify-center mb-6"
@@ -121,7 +121,7 @@ const ComputerStart = () => {
             onDragOver={handleDragOver}
             onDrop={handleDrop}
           >
-            <img src="/img/monitor.png" alt="Paso 2" className="w-32 h-32" />
+            <img src="/img/monitor.png" alt="Paso 2" className="size-48" />
           </div>
         </div>
         <div className="flex justify-center space-x-4">

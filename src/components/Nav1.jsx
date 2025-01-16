@@ -49,6 +49,12 @@ const Navbar = () => {
             Inicio
           </a>
           <a
+            href="/Lecciones"
+            className="bg-[#ffd27f] hover:bg-[#ebb147] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-3xl px-4 py-2 text-center block md:inline"
+          >
+            Lecciones
+          </a>
+          <a
             href="/Ejercicios"
             className="bg-[#ffd27f] hover:bg-[#ebb147] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-3xl px-4 py-2 text-center block md:inline"
           >
