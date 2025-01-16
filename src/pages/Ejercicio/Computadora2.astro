@@ -1,0 +1,14 @@
+---
+import Computadora2C from "../../components/Computadora2C";
+import Ejercicio from "../../components/Ejercicio.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <SectionContainer class="pt-32 w-screen">
+    <Ejercicio leccion="/Leccion/Computadora2">
+      <Computadora2C client:visible/>
+    </Ejercicio>
+  </SectionContainer>
+</Layout>
